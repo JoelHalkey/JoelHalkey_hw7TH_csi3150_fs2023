@@ -8,6 +8,9 @@ import "./signup.css";
 // e. User Phone Number 
 
 const SignUp = () => { 
+    // Uses useState() to be able to create a state to hold variables.
+    // These variables can be retrieved (formData.*data*) or set (setFormData())
+    // at any time.
     const [formData, setFormData] = React.useState({
         userFullName: "",
         username: "",
@@ -16,12 +19,16 @@ const SignUp = () => {
         userPhoneNumber: ""
     });
 
+    // Prints out the data in the console.
     function submitForm(e){
-        // Prints out the data in the console.
+        // Prevent default disallows for the submit button to refresh the 
+        // page every time it's pressed.
         e.preventDefault();
         console.log(formData);
     }
 
+    // Takes the previous form data and changes it or adds new data to the 
+    // current state.
     function handleChange(e){
         const { name, value } = e.target;
         setFormData((prevFormData) => {
