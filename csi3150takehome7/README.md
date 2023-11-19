@@ -73,6 +73,7 @@ useEffect(() => {
       .then(response => response.json())
       .then(data => setData(data));
 
+    // Could also just be used for updating other parts of a component if another part changes.
 
     return () => {
       // Used to return HTML with the data gathered from the API/Function call.
