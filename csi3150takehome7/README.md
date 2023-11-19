@@ -4,6 +4,17 @@ The image below demonstrates the output that's being taken from the current stat
 
 ![Output in console](output_screenshot.png)
 
+Code for printing to the console
+```javascript
+// Prints out the data in the console.
+function submitForm(e){
+    // preventDefault disallows for the submit button to refresh the 
+    // page every time it's pressed.
+    e.preventDefault();
+    console.log(formData);
+}
+```
+
 ## React State Management
 
 ### useState()
